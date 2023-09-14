@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClassesLandfill">
+  <DataContextMoniker Name="/DataClassesLandfillDataContext" />
+  <nestedChildShapes>
+    <classShape Id="4a01737a-a8b1-46c1-b762-ad5742836669" absoluteBounds="3.875, 0.75, 2, 3.1170068359375">
+      <DataClassMoniker Name="/DataClassesLandfillDataContext/LandfillUser" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4fe07856-9027-482e-994c-84489fbdd03f" absoluteBounds="3.89, 1.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b39f0875-cd31-4234-b952-5851ada75c69" absoluteBounds="0.75, 0.875, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DataClassesLandfillDataContext/PassageLandfill" />
+      <nestedChildShapes>
+        <elementListCompartment Id="91098c0a-14bd-4428-8bfa-6aa081fd9591" absoluteBounds="0.76500000000000012, 1.335, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.875 : 1.85659912109375); (2.75 : 1.85659912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesLandfillDataContext/LandfillUser/LandfillUser_PassageLandfill" />
+      <nodes>
+        <classShapeMoniker Id="4a01737a-a8b1-46c1-b762-ad5742836669" />
+        <classShapeMoniker Id="b39f0875-cd31-4234-b952-5851ada75c69" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
