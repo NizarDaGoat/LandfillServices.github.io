@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Landfill" Class="DataClassesLandfillDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.LandfillUser" Member="LandfillUsers">
+    <Type Name="LandfillUser">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Updated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="CompanyCoperateName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="PhoneNumber" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Type" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Association Name="LandfillUser_PassageLandfill" Member="PassageLandfills" ThisKey="ID" OtherKey="UserID" Type="PassageLandfill" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PassageLandfill" Member="PassageLandfills">
+    <Type Name="PassageLandfill">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Created" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Updated" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="UserID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DateOfPassage" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Pay" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="LandfillUser_PassageLandfill" Member="LandfillUser" ThisKey="UserID" OtherKey="ID" Type="LandfillUser" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
